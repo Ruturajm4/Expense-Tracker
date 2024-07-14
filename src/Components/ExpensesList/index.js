@@ -23,6 +23,7 @@ const ExpensesList = ({ expensesList, setExpensesList,categoriesData, setWalletB
         const dateB = new Date(b.date.split("/").reverse().join("-"));
         return dateA - dateB;
     };
+    
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
