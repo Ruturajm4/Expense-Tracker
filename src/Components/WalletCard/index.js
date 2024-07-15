@@ -16,7 +16,7 @@ const WalletCard = ({ text, btn_text, transactionType,value, setExpensesList, se
     const handleExpenses = () => {
         setShowModal(true);
     };
-    
+
     const handleAddMoney = () => {
         if (transactionType === "addingAmount") {
             setWalletBalance(prevAmount => prevAmount + newAmount.price);
@@ -96,7 +96,9 @@ const WalletCard = ({ text, btn_text, transactionType,value, setExpensesList, se
                     </div>
                 </div>
             </Modal>
+            
             }
+           
         </div>
     );
 };

@@ -1,6 +1,8 @@
 import React from "react";
 import "./pagination.css"
+
 const Pagination = ({currentPage, paginate, totalPages}) => {
+
     return(
         <div className="pagination">
             <button
@@ -10,7 +12,9 @@ const Pagination = ({currentPage, paginate, totalPages}) => {
             >
                 <img src="backward.png" alt="backward" className="navigate-position" />
             </button>
+
             <div>{currentPage}</div>
+            
             <button
                 className="navigate-btn"
                 onClick={() => paginate(currentPage + 1)}

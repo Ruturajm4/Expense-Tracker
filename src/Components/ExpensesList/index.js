@@ -3,6 +3,7 @@ import "./expensesList.css";
 import ExpensesListItem from "../ExpenseListItem";
 import Pagination from "../Pagination";
 import ExpensesBarChart from '../ExpensesBarChart';
+
 const ExpensesList = ({ expensesList, setExpensesList,categoriesData, setWalletBalance }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(3);
@@ -23,7 +24,7 @@ const ExpensesList = ({ expensesList, setExpensesList,categoriesData, setWalletB
         const dateB = new Date(b.date.split("/").reverse().join("-"));
         return dateA - dateB;
     };
-    
+
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
@@ -59,6 +60,7 @@ const ExpensesList = ({ expensesList, setExpensesList,categoriesData, setWalletB
                                 </div>
                                 )
                             })}
+                            
                             <Pagination
                                 currentPage = {currentPage}
                                 paginate = {paginate}
